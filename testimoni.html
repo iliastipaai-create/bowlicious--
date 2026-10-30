@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      href="foto produk/ChatGPT_Image_Sep_24__2026__08_06_23_PM-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <title>Testimoni | BOWLICIOUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="testimoni">
+    <nav id="navbar" class="solid">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="BOWLICIOUS Home">
+<img src="foto produk/logo-bowlicious.png" alt="Logo BOWLICIOUS" style="height: 40px; width: auto; vertical-align: middle; margin-right: 10px;">
+    <span>BOWLICIOUS</span>
+</a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Buka menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="pemesanan.html" class="nav-link">Pemesanan</a></li>
+                <li><a href="testimoni.html" class="nav-link active">Testimoni</a></li>
+                <li><a href="pemesanan.html" class="btn btn-primary nav-cta">Pesan Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="review-section page-top">
+        <div class="container">
+            <div class="review-header reveal">
+                <h1 class="section-title dark-text text-center">WHAT PEOPLE SAY.</h1>
+                <p class="section-subtitle text-center">Setiap mangkuk punya cerita. Bagaimana dengan pengalamanmu?</p>
+            </div>
+
+            <div class="review-grid">
+                <div class="rating-summary reveal">
+                    <div class="average-rating-display">
+                        <h2 id="avgRatingNum">0.0</h2>
+                        <div class="stars-display" id="avgStarsDisplay"></div>
+                        <p><span id="totalReviewsCount">0</span> Ulasan</p>
+                    </div>
+                    <div class="rating-distribution" id="ratingDistribution"></div>
+                </div>
+
+                <div class="write-review reveal delay-1">
+                    <h2 class="form-title">Tulis Ulasan Anda</h2>
+                    <form id="reviewForm" novalidate>
+                        <div class="form-group">
+                            <label for="reviewerName">Nama Tampilan *</label>
+                            <input type="text" id="reviewerName" required placeholder="Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label>Rating *</label>
+                            <div class="star-rating-input" id="starInput">
+                                <i class="fas fa-star" data-value="1"></i>
+                                <i class="fas fa-star" data-value="2"></i>
+                                <i class="fas fa-star" data-value="3"></i>
+                                <i class="fas fa-star" data-value="4"></i>
+                                <i class="fas fa-star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="reviewRating">
+                            <span class="error-msg" id="ratingError">Silakan pilih rating.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewComment">Komentar *</label>
+                            <textarea id="reviewComment" required rows="3" placeholder="Ceritakan pengalaman Anda..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">KIRIM ULASAN</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="review-list" id="reviewList">
+    <div id="reviewItems"></div>
+</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>BOWLICIOUS</h2>
+                <p>Premium Modern Street Food.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pemesanan.html">Pemesanan</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak Bisnis</h4>
+                <p><i class="fas fa-map-marker-alt"></i>Alamat</p>
+          <p><i class="fab fa-whatsapp"></i> WA</p>
+          <p><i class="fab fa-instagram"></i> @bowlicious.id</p>
+          <p><i class="fab fa-tiktok"></i> @bowlicious.id</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> BOWLICIOUS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

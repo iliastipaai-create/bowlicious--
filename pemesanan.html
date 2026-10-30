@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      href="foto produk/ChatGPT_Image_Sep_24__2026__08_06_23_PM-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <title>Pemesanan | BOWLICIOUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="pemesanan">
+    <nav id="navbar" class="solid">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="BOWLICIOUS Home">
+    <img src="foto produk/logo-bowlicious.png" alt="Logo BOWLICIOUS" style="height: 40px; width: auto; vertical-align: middle; margin-right: 10px;">
+    <span>BOWLICIOUS</span>
+</a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Buka menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="pemesanan.html" class="nav-link active">Pemesanan</a></li>
+                <li><a href="testimoni.html" class="nav-link">Testimoni</a></li>
+                <li><a href="pemesanan.html" class="btn btn-primary nav-cta">Pesan Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="order-section page-top">
+        <div class="container">
+            <div class="order-grid">
+                <div class="product-showcase reveal">
+                    <img src="foto produk/ChatGPT_Image_Sep_24__2026__08_06_23_PM-removebg-preview.png" alt="Bowlicious Signature Bowl" class="product-img-large">
+                    <div class="product-info">
+                        <h1 class="product-name">BOWLICIOUS SIGNATURE BOWL</h1>
+                        <p class="product-desc">Nasi hangat dengan topping daging premium pilihan, disiram saus rahasia Bowlicious yang berani dan menggugah selera.</p>
+                        <h4 class="product-price" id="product-price" data-price="14000">Rp14.000</h4>
+                    </div>
+                    <div class="status-box">
+                        <h4>Status Pesanan</h4>
+                        <p id="orderStatus">Silakan isi formulir di samping untuk memesan.</p>
+                    </div>
+                </div>
+
+                <div class="preorder-form-container reveal delay-1">
+                    <h2>Form Pre-Order</h2>
+                    <form id="orderForm" novalidate>
+                        <div class="form-group">
+                            <label for="orderName">Nama Lengkap *</label>
+                            <input type="text" id="orderName" required placeholder="Masukkan nama Anda">
+                            <span class="error-msg" data-for="orderName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderWA">Nomor WhatsApp *</label>
+                            <input type="tel" id="orderWA" required placeholder="08xxxxxxxxxx" inputmode="tel">
+                            <span class="error-msg" data-for="orderWA"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderQty">Jumlah Pesanan *</label>
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn" id="btn-minus" aria-label="Kurangi"><i class="fas fa-minus"></i></button>
+                                <input type="number" id="orderQty" value="1" min="1" readonly>
+                                <button type="button" class="qty-btn" id="btn-plus" aria-label="Tambah"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderDate">Tanggal Pengambilan *</label>
+                            <input type="date" id="orderDate" required>
+                            <span class="error-msg" data-for="orderDate"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderNotes">Catatan Tambahan (Opsional)</label>
+                            <textarea id="orderNotes" rows="3" placeholder="Contoh: Pedas dipisah..."></textarea>
+                        </div>
+                        <div class="summary-box">
+                            <h4>Ringkasan Pesanan</h4>
+                            <div class="summary-row"><span>Produk</span><span>Signature Bowl</span></div>
+                            <div class="summary-row"><span>Jumlah</span><span id="sumQty">1</span></div>
+                            <div class="summary-row"><span>Pengambilan</span><span id="sumDate">-</span></div>
+                        </div>
+                        <div class="order-summary">
+                            <span>Total Harga:</span>
+                            <span class="total-price" id="totalPrice">Rp14.000</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">KONFIRMASI PRE-ORDER</button>
+                        <div id="orderFeedback" class="feedback-msg" role="status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>BOWLICIOUS</h2>
+                <p>Premium Modern Street Food.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pemesanan.html">Pemesanan</a></li>
+                    <li><a href="testimoni.html">Testimoni</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak Bisnis</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Alamat</p>
+                <p><i class="fab fa-whatsapp"></i> WA</p>
+                <p><i class="fab fa-instagram"></i> @bowlicious.id </p>
+                <p><i class="fab fa-tiktok"></i> @bowlicious.id </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> BOWLICIOUS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
